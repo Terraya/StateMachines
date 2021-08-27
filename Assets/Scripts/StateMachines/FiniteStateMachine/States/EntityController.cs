@@ -1,16 +1,18 @@
-using TDSGamer.FiniteStateMachine;
 using UnityEngine;
 
-[RequireComponent(typeof(FiniteStateMachine))]
-public class EntityController : MonoBehaviour, IAction
+namespace TDSGamer.FiniteStateMachine
 {
-    private FiniteStateMachine _stateMachine;
+    [RequireComponent(typeof(FiniteStateMachine))]
+    public class EntityController : MonoBehaviour, IAction
+    {
+        private FiniteStateMachine _stateMachine;
 
-    private void Start() => _stateMachine = GetComponent<FiniteStateMachine>();
-    
-    public void Idle() => _stateMachine.StartAction(this);
+        private void Start() => _stateMachine = GetComponent<FiniteStateMachine>();
 
-    public bool CanCancel() => true;
+        public void Idle() => _stateMachine.StartAction(this);
 
-    public void Cancel() => print("Cancel Idle");
+        public bool CanCancel() => true;
+
+        public void Cancel() => print("Cancel Idle");
+    }
 }

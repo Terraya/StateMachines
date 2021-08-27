@@ -8,17 +8,16 @@ namespace TDSGamer.FiniteStateMachine
 
 #if UNITY_EDITOR
         public string activeAction = "NaN";
-        private void Update() => activeAction = currentAction == null ? "NaN" : currentAction.ToString();
+        private void Update() 
+            => activeAction = currentAction == null 
+                ? "NaN" 
+                : currentAction.ToString();
 #endif
 
         public void StartAction(IAction action)
         {
-            if (action == null)
-            {
-                currentAction = null;
-                return;
-            }
-
+            if (action == null) return;
+            
             if (currentAction == action) return;
 
             if (currentAction != null && !currentAction.CanCancel()) return;
@@ -37,11 +36,9 @@ namespace TDSGamer.FiniteStateMachine
 
         public void AbortCurrentAction()
         {
+            if (currentAction == null) return;
             currentAction.Cancel();
             currentAction = null;
         }
-
-        public void ResetCurrentAction()
-            => StartAction(null);
     }
 }
