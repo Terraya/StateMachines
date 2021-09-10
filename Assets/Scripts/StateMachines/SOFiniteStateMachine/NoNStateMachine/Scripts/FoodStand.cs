@@ -4,17 +4,16 @@ namespace TDSGamer.SOFiniteStateMachine
 {
     public class FoodStand : MonoBehaviour
     {
-        [Header("FoodStand Setup")] [SerializeField]
-        private Transform moveToPosition;
-
+        [Header("FoodStand Setup")] 
+        [SerializeField] private Transform moveToPosition;
         public Transform MoveToPosition => moveToPosition;
-
-        [Space(10)] [Header("FoodStand Settings")] [SerializeField]
-        private float healthRecover;
-
+        
+        [Header("FoodStand Settings")] 
+        [SerializeField] private float healthRecover;
         public float HealthRecover => healthRecover;
 
 #if UNITY_EDITOR
+        [Header("Gizmos Setup")]
         public bool showGizmos = false;
         public float gizmoSize = 0.4f;
 

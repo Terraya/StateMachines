@@ -3,7 +3,7 @@
 namespace TDSGamer.SOFiniteStateMachine
 {
     [CreateAssetMenu(fileName = "DecisionSO_Healthy", menuName = "SOFiniteStateMachine/Decisions/HealthySO")]
-    public class HealthyDecisionSO : Decision
+    public class HealthyDecisionSO : BaseDecisionSO
     {
         public override bool Decide(SOFiniteStateMachine machine)
         {

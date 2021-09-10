@@ -28,12 +28,12 @@ namespace TDSGamer.SOFiniteStateMachine
             bool isEnough = boxes > 8;
             return isEnough;
         }
-        
+
         public void ConsumeBehaviour()
         {
             entityMover.MoveToDestination(foodStands[nextFoodStandWaypoint].MoveToPosition, () =>
             {
-                entityStats.Health += 50;
+                entityStats.Health += foodStands[nextFoodStandWaypoint].HealthRecover;
                 nextFoodStandWaypoint = (nextFoodStandWaypoint + 1) % foodStands.Length;
             });
         }

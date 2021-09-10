@@ -5,7 +5,7 @@ namespace TDSGamer.SOFiniteStateMachine
     [Serializable]
     public class Transition 
     {
-        public Decision decision;
+        public BaseDecisionSO baseDecisionSo;
         public StateSO trueStateSo;
         public StateSO falseStateSo;
     }

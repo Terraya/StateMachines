@@ -2,12 +2,13 @@
 
 namespace TDSGamer.SOFiniteStateMachine
 {
+    [RequireComponent(typeof(EntityMover))]
+    [RequireComponent(typeof(ConsumingBehaviour))]
+    [RequireComponent(typeof(EntityStats))]
     public class SOFiniteStateMachine : MonoBehaviour
     {
-        public StateSO currentStateSo;
-        public StateSO remainStateSo;
-
-        public float stateTimeElapsed;
+        [SerializeField] private StateSO currentStateSo;
+        [SerializeField] private StateSO remainStateSo;
 
         private EntityStats entityStats;
         private EntityMover entityMover;
@@ -34,19 +35,7 @@ namespace TDSGamer.SOFiniteStateMachine
             if (nextStateSo != remainStateSo) 
             {
                 currentStateSo = nextStateSo;
-                OnExitState ();
             }
-        }
-        
-        public bool CheckIfCountDownElapsed(float duration)
-        {
-            stateTimeElapsed += Time.deltaTime;
-            return (stateTimeElapsed >= duration);
-        }
-
-        private void OnExitState()
-        {
-            stateTimeElapsed = 0;
         }
     }
 }

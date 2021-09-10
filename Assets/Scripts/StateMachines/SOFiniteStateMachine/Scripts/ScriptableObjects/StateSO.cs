@@ -25,7 +25,7 @@ namespace TDSGamer.SOFiniteStateMachine
         {
             for (int i = 0; i < transitions.Length; i++) 
             {
-                bool decisionSucceeded = transitions [i].decision.Decide (machine);
+                bool decisionSucceeded = transitions [i].baseDecisionSo.Decide (machine);
 
                 if (decisionSucceeded) {
                     machine.TransitionToState (transitions [i].trueStateSo);
