@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0926dc8e7bde4b3894412435285f56f4, type: 3}
+  m_Name: DamageState
+  m_EditorClassIdentifier: 
+  _actions:
+  - {fileID: 11400000, guid: 8af0e7c8e08d691489c1680816b15513, type: 2}
