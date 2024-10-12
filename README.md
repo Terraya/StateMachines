@@ -1,2 +1,2 @@
 # StateMachines
-Repository for my youtube tutorial series about State Machines
+Repository with util systems
